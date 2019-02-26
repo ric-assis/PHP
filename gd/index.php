@@ -2,7 +2,7 @@
 	
 	$filename = "pc.jpg";
 	
-	//Esses nao sao o tamnhao da imagem e sim o maximo
+	//Esses nao sao o tamanho da imagem e sim o maximo
 	$width = "200";
 	$height = "200";
 	

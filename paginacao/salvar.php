@@ -9,6 +9,7 @@
 	$cpError = $_FILES["capa"]["error"];
 	$cpName = $_FILES["capa"]["name"];
 	$cpType = $_FILES["capa"]["type"];
+	$cpTmpName = $Files["capa"]["tmp_name"]
 	
 	$tipo = array("image/png", "image/jpg", "image/jpeg", "image/pjpeg");
 	$tamanho = 2048 * 1024;
@@ -29,7 +30,7 @@
 	
 	$nome_do_arquivo = md5(time().rand(0,99)).".".$extensao;
 	
-	if((isset($capa["tmp_name"])) && (!empty($capa["tmp_name"]))){
+	if((isset($cpTmpName)) && (!empty($cpTmpName))){
 		require_once "connect.php";
 		
 		move_uploaded_file($capa["tmp_name"], "capas/".$nome_do_arquivo);

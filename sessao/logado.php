@@ -28,7 +28,8 @@
 					<h5>Abra ou envie o link a um amigo:</h5>
 					<h3 class="btn btn-link"><?php echo "<a href='http://localhost/sessao/verifica_chave.php?chave=".$sql["chave"]."'>Criar nova conta através de convite</a>"; ?></h3>	
 					<hr/>
-					<button class="btn btn-danger" id="sair">Sair</button>					
+					<button class="btn btn-danger" id="sair">Sair</button>	
+					<?php echo session_id(); ?>
 				</div>
 			</div>			
 		</div>

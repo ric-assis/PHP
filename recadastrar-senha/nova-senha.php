@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	date_default_timezone_set("America/Sao_Paulo");//Usar o mesmo timezone
-	header("Content-type:text/html; charset=utf-8",true);
+	header("Content-type:text/html;charset=utf-8",true);
 	
 	require_once "connect.php";
 		
@@ -41,7 +41,7 @@
 			}
 
 		}else{
-			echo "Token inválido.";
+			echo "Token invÃ¡lido.";
 		}			
 		
 	}

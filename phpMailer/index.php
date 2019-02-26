@@ -21,7 +21,7 @@
 	$mail->SMTPAuth = true;
 	
 	//Usuario da conta SMTP
-	$mail->Username = "email@gmail.com";
+	$mail->Username = "seuemail@gmail.com";
 	
 	//Senha
 	$mail->Password = "******";
@@ -33,19 +33,19 @@
 	$mail->Port = 465;
 	
 	//Envia imagens inseridas ao texto, o cid funciona como um id na localzacao da imagem e é necessario
-	$mail->AddEmbeddedImage("imagem.jpg", "logo", "imagem.jpg");
+	$mail->AddEmbeddedImage("cadeado.jpg", "logo", "cadeado.jpg");
 		
 	//Permite código html no texto enviado
 	$mail->isHTML(true);
 	
 	//Email do remetente
-	$mail->From = "email@gmail.com";
+	$mail->From = "seuemail@gmail.com";
 	
 	//Nome do remetente
 	$mail->FromName = "Alonso Ricardo";
 	
-	//Remetente 
-	$mail->AddAddress("email@yahoo.com.br");
+	//Destinatário
+	$mail->AddAddress("emaildodestinatario@outlook.com");
 	
 	//Titulo
 	$mail->Subject = "Teste com phpMailer";
