@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>XML</title>
-		<link href="bootstrap.css" type="text/css" rel="stylesheet">
+		<link href="bootstrap.min.css" type="text/css" rel="stylesheet">
 	</head>	
 	<body>
 		<div class="container">
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<script src="jquery-3.3.1.min.js" type="text/javascript"></script>
-		<script src="bootstrap.bundle.js" type="text/javascript"></script>
+		<script src="bootstrap.bundle.min.js" type="text/javascript"></script>
 		<script src="ajax.js" type="text/javascript"></script>
 	</body>
 </html>

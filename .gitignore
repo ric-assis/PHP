@@ -4,3 +4,10 @@ enviar.php
 #WordPress
 wordpress/
 wordpress2/
+
+#Projetos pessoais
+/nbproject/private/
+/teste/nbproject/private/
+/teste
+/br.com.descomplicamonografia
+/br.com.universelandc

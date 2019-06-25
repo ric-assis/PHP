@@ -13,7 +13,7 @@
 		$pdo = Connect::getPDO();
 		$stm = $pdo->prepare("SELECT id, senha FROM usuario WHERE email=? AND cookie=?");
 		$stm->bindValue(1, $email);
-		$stm->bindValue(1, $senha);
+		$stm->bindValue(2, $senha);
 		$stm->execute();
 		
 		if($stm->rowCount() > 0){			
@@ -25,7 +25,7 @@
 			$_SESSION["id"] = $stm["id"];
 			header("location:index.php");
 		}else{
-			header("location:logar.php?pag-acessada=index.php");		
+			header("location:logar.php?pag-acessada=index.php");	//Lembra a pagina que tentou aacessar	
 		}
 	}		
 	

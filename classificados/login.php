@@ -6,9 +6,9 @@
 	$email = addslashes($_POST["email"]);
 	$senha = addslashes($_POST["senha"]);
 		
-	if(isset($_POST["chk"])){
+	/*if(isset($_POST["chk"])){
 		$lemb_senha = addslashes($_POST["chk"]);
-	}
+	}*/
 	
 	if(isset($email) && !empty($email) && isset($senha) && !empty($senha)){
 		$pdo = Connect::getPDO();
@@ -21,8 +21,10 @@
 			$_SESSION["id"] = $login->getLogin();
 			
 			if(isset($_POST["chk"]) && !isset($_COOKIE["classificados[pass]"]) && !isset($_COOKIE["classificados[user]"])){
-				setCookie("classificados[user]", $login->getEmail(), strtotime("+10 days"));//Não foram aplicados os devidos sistemas de segurança por ser um exemplo 				
-				
+				setcookie("classificados[user]", $login->getEmail(), strtotime("+10 days"), "/");//Não foram aplicados os devidos sistemas de segurança por ser um exemplo 				
+				/*A barra no final pode ser usado caso o cookie nao seja reconhecido em todas as paginas
+				é o caminho dele no caso no site todo por devido a /
+				*/
 				/*
 				$options = ["cost" => 10];
 				$cookie = password_hash($login->getSenha(), PASSWORD_ARGON2I, $options);
