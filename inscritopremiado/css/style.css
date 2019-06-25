@@ -1,0 +1,11 @@
+.full-image {
+  width: 100%!important;
+}
+
+.full-image img {
+  max-width: 100%!important;
+}
+
+#banner-img {
+  max-width: 100%;
+}

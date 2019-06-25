@@ -1,0 +1,1 @@
+<h1>Você tem <?php echo $quant ?> fotos na galeria</h1>

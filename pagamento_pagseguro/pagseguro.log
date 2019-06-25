@@ -1,0 +1,7 @@
+
+21/06/2019 14:47:09 PagSeguro.Session[info]: Begin
+21/06/2019 14:47:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=a.ric.c.assis%40gmail.com&token=FCD16087380A43E7BC72649B8521937B
+21/06/2019 14:47:10 PagSeguro.Session[info]: Session ID: 7b4d5541b5a54eb3826d0e93998cbb06
+21/06/2019 14:48:03 PagSeguro.Session[info]: Begin
+21/06/2019 14:48:03 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=a.ric.c.assis%40gmail.com&token=FCD16087380A43E7BC72649B8521937B
+21/06/2019 14:48:03 PagSeguro.Session[info]: Session ID: af9f1852b4ea4c8dabca74fb65de15e0

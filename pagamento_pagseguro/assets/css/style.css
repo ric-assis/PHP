@@ -1,0 +1,392 @@
+/*LOGIN/CADASTRO USUARIO/CADASTRO CONSULTOR/TRABALHO*/
+html,
+body{
+    height:100%;
+    background-color: #f4f4f4;    
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+textArea{
+    resize: none;
+}
+
+input[name='avatar']{
+    display: none;
+}
+
+#img-avatar{
+    cursor: pointer;
+}
+
+/*DASHBOARD*/
+#editar{
+    text-decoration: none; 
+}
+
+#list{
+    overflow-y: auto;
+}
+
+.widgets{
+    min-width: 250px;
+}
+
+/*DASHBOARD*/
+#myworks{
+    overflow-y: auto;
+}
+
+/*TRABALHO*/
+.img-starConsultor{
+    object-fit: none;
+    height: 19px;
+    object-position: -21px 0;
+    width: 20px;  
+}
+
+.star{
+    cursor:pointer;
+}
+
+.panel-myproposal #text{
+    max-width: 660px;
+}
+
+#box-btn-proposal{
+    min-width: 133px;
+}
+
+.states-proposal{
+    min-width: 80px;
+}
+
+th{
+    max-width: 88px;
+}
+
+input[name='arquivo_trabalho']{
+    display:none;
+}
+
+/*DASHBOARD*/
+/*Para colorir object-position 0 0 | width 20px*/
+.img-star{
+    object-fit: none;
+    height: 19px;
+    object-position: -21px 0;
+    width: 20px;  
+}
+
+/*MENSAGEMS*/
+#search{
+    width: 300px;    
+    position: relative;
+}
+
+#search input{
+    width: 100%;
+    height: 40px;
+}
+
+#search button{
+    position: absolute;
+    right: 2px;
+    width: 45px;   
+}
+
+#search img{   
+    width: 21px;
+}
+
+#message{
+    position: relative;
+    height: 600px;
+}
+
+#message #box-message{
+    overflow-y: auto;
+    max-height: 327px;
+}
+
+#panel-conversa .card-header{
+    overflow-y: auto;
+}
+
+#panel-conversa .card-footer{
+    height: 39px;
+}
+
+#options-message{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#options-message form div{
+    background: #F4F4F4;
+}
+
+#message #title{
+    background: #F4F4F4; 
+    height: 118px;
+}
+
+input[name='message-anexo[]']{
+    display: none;
+}
+
+.mensagem{
+    cursor: pointer;
+}
+
+.highlight {
+    color: red; 
+}
+
+/*NOVOS TRABALHOS*/
+#panel-filtro .card-body{
+    height: 540px;
+    overflow-y: auto;
+}
+
+#list-work{
+    position: relative;
+    height: 600px; 
+    overflow-y: auto;
+}
+
+#btn-limpar{
+    display: none;
+}
+
+#list-work #box-work{
+    overflow-y: auto;
+}
+
+#panel-filtro .others{
+    display: none;
+}
+
+/*PUBLICAR-TRABALHO*/
+#frmPublicWork .others{
+    display: none;
+}
+
+/*EDITAR-TRABALHO*/
+#frmUpdateWork .others{
+    display: none;
+}
+
+/*COMO FUNCIONA*/
+#header{
+    background: #50b29b;
+}
+
+#header div{
+    width: 250px;
+}
+    
+
+#list-consultant{
+    position: relative;
+    height: 600px;
+}
+
+#list-consultant #box-consult{
+    height: 550px; 
+    overflow-y: auto;  
+}
+
+/*DISPUTA*/
+#speaker #reason{
+    display: none;
+}
+
+
+/*CONFIGURACOES DE ACESSO*/
+#close-count{
+    display: none;
+}
+
+
+/*INDEX DISPUTA*/
+#containerDispute{
+    min-height: 700px;
+}
+
+/*CONTA-PREMIUM*/
+.img-pag{
+    object-fit: none; 
+    height: 96px;
+}
+
+#img-cartao{
+    object-position: -2px 0;
+    width: 56px;
+    height: 55px;
+}
+
+#img-boleto{
+    object-position: -55px 0;
+    width: 62px; 
+    height: 55px;
+}
+
+#img-pgseguro{
+    object-position: -114px 0;
+    width: 96px; 
+    height: 55px;
+}
+
+#divFlags{
+    display: none;
+}
+
+#divCard{
+    display: none;
+}
+
+#cpfBoletoBalance{
+    display: none;
+}
+
+#divBanco{
+    display: none;
+}
+
+#imgAguarde{
+    display: none;
+}
+
+/*DASHBOARD/MENSAGEMS*/
+@media (min-width: 768px){  
+    .containerInt div{
+        max-width: 900px;
+    }
+}
+
+/*DASHBOARD*/
+@media (min-width: 768px){      
+    #panel-perfil{
+        max-width: 280px;        
+    } 
+    
+    #myworks{
+        min-height: 600px;
+    }
+    
+}
+
+/*MENSAGEMS*/
+@media (min-width: 768px){     
+    #panel-conversa{
+        display: flex;    
+        max-width: 280px;        
+    } 
+    
+    #panel-conversa .card{
+        min-width: 253px;
+    }
+    #message{
+        min-height: 600px;
+    }  
+    
+    #panel-conversa .card-body{
+        height: 483px;
+    }
+}
+
+
+/*NOVOS TRABALHOS*/
+@media (min-width: 768px){     
+    #panel-filtro{
+        display: flex;    
+        max-width: 280px;        
+    }     
+    
+    #panel-filtro .card{
+        min-width: 253px;
+    }
+    #list-work{
+        min-height: 600px;
+        margin-top: 0 !important;
+    } 
+    
+}
+
+/*ENVIAR PROPOSTA*/
+@media (min-width: 768px){     
+    #panel-proposal{
+        display: flex; 
+        max-width: 440px;
+    }     
+    
+   #panel-proposal .form-group:first-child{
+        width: 50%;
+    }
+    
+    #panel-proposal .card{
+       width: 100%;       
+    }
+    #doubt{
+        max-width: 440px;        
+        max-height: 565px;
+        margin-top: 0 !important;
+    }     
+}
+
+/*CONSULTORES*/
+@media (min-width: 768px){     
+    #panel-consultant{
+        display: flex;    
+        max-width: 280px;        
+    }     
+    
+    #panel-consultant .card{
+        min-width: 253px;
+    }
+    #list-consultant{
+        min-height: 600px;
+        margin-top: 0 !important;
+    }     
+   
+    #panel-consultant .card-body{
+        height: 540px;
+    }
+    
+}
+
+/*TRABALHO*/
+@media (min-width: 768px){ 
+    .description{
+        max-width: 65% !important;
+        margin-right: 10px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .panel-myproposal{
+        min-height: 215px;
+    } 
+    
+    #myproposal{
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+
+}
+/*PERFIL*/
+@media (min-width: 768px){ 
+    #frmCadastro{
+        position: relative;
+    }
+    
+    #divButton{
+        max-width: 40%;
+        position: absolute;
+        top: 82%;
+    }
+}

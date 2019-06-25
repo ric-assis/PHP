@@ -1,0 +1,8 @@
+/*Esconde o botão*/
+input[name='avatar']{
+    display: none;
+}
+
+#img-avatar{
+    cursor: pointer;
+}
