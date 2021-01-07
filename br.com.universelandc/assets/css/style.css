@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    padding: 0;  
+}
+    
+.row{
+    margin: 0;
+    padding: 0;
+}
+
+div[class^='col-']{
+    margin: 0;
+    padding: 0;
+}
+
+/*NAV*/
+nav{    
+    min-height: 80px;
+    background-image: url('../img/thumb.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;          
+}
+
+#nav{    
+    position: sticky !important; 
+    top:0;  
+    z-index: 999; 
+}
+
+#btn-login{
+    border: 2px solid #6f27bc !important;    
+}
+
+#btn-login:hover, #btn-rolagem:hover{
+    background-color: #6f27bc;  
+    transition: background 3s;
+    -webkit-transition: background 3s;
+    -o-transition: background 3s;
+    -moz-transition: background 3s;      
+}
+
+/*BANNER*/
+#banner{
+    height: 624px;
+    background: transparent; 
+    position: relative;
+}
+
+#btn-rolagem{
+    position: absolute;
+    bottom: 20px; 
+}
+
+#btn-assine{
+    background-color: #743ca3 !important;
+    opacity: 0.7;   
+}
+
+/*COMO FUNCIONA*/
+#como-funciona{   
+    background-image: url('../img/fundo.png'); 
+    background-repeat: no-repeat;    
+    background-position: center;
+    background-size: cover;
+    padding-top: 57px;
+    padding-left: 19px;
+    padding-right: 27px;
+    padding-bottom: 30px; 
+    color:#fff;
+}
+
+#como-funciona hr{
+    background-color: #fff;
+}
+
+#como-funciona h3{
+    color: #d0d0d0;
+}
+
+/*QUEM SOMOS*/
+.hr-amarela{
+    background-color:#ffff00;
+    height: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+#quem-somos{     
+    background-image: url('../img/quem-somos.jpg'); 
+    background-repeat: no-repeat;    
+    background-position: center;
+    background-size: cover;
+    color:#fff;
+}
+
+#quem-somos h3{
+    color: #ffff00;
+}
+
+/*O NOVO SE REFAZ*/
+#novo-se-refaz{
+    background-color: #000;
+    color: #fff;    
+}
+
+.sub-verde{
+background-color:#149565;
+height: 3px;
+width: 226px;
+border-top: 0 !important;    
+}
+
+#hr-verde{
+    background-color:#149565;
+    height: 3px; 
+    margin: 0;
+    
+}
+
+/*ENVELOPES*/
+#envelopes{
+    background-color: #000;
+    color: #fff;    
+}
+
+#hr-vermelho{
+    background-color:#ff0000;
+    height: 3px;   
+    margin: 0;
+}
+
+#hr-azul{
+    background-color:#3764bf;
+    height: 3px;   
+    margin: 0;
+}
+
+#pack{     
+    background-image: url('../img/space.jpg'); 
+    background-repeat: no-repeat;    
+    background-position: center;
+}
+
+#valor{
+    font-size: 24px;
+}
+
+/*FORMULARIO/OPCOES*/
+#div-form{
+    background-color: #000;
+}
+
+#div-form form{
+    background-color: #212121;
+}
+
+#div-opcoes{
+    background-color: #3764bf;
+}
+
+/*FOOTER*/
+footer{
+    background-color: #583e80;
+}
+
+/*RESGATAR*/
+#frmGiftCard{
+    position: relative;
+}
+
+#frmGiftCard button{
+    position: absolute;
+    right: 0;
+    top:0;
+    background-color: #5d378d;
+    color:#fff;
+}
+
+#hr-preta{
+    background-color:#000;
+    height: 2px;     
+}
+
+@media (min-width: 768px){
+    #menus{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,21 @@
+{
+	"name": "MVC/app",
+	"type": "project",
+	"authors":[
+		{
+			"name":"Alonso",
+			"email":"a.ric.c.assis@gmail.com"
+		}		
+	],
+	"require":{
+	
+	},
+	"autoload":{
+		"psr-4":{
+			"core\\":"core/",
+			"controllers\\":"controllers/",
+			"DAO\\":"DAO/",
+			"models\\":"models/"
+		}		
+	}	
+}

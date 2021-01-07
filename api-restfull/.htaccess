@@ -1,0 +1,25 @@
+# Disabilitar CACHING
+#<IfModule mod_headers.c>
+#    Header set Cache-Control "no-cache, no-store, must-revalidate"
+#    Header set Pragma "no-cache"
+#    Header set Expires 0
+#</IfModule>
+
+
+#Verifica se o modulo header do Apache está ativo, se sim resolve o problema do modo CORPS
+#Os navegadores restringem solicitações http iniciadas dentro do script como por ex Ajax.
+#Assim uma solicitacao Ajax só pederia fazer solicitações para seu proprio dominio.
+#Mas e quando não sabemos se o dominio acessado será HTTP, HTTPS, com ou sem WWW? Como
+#so pode haver um cabeçalho será um problema caso o usuario acesse https://dominio.com porém
+#na requisição Ajax está configurado https://www.dominio.com o CORPS impedira a requisição.
+#Para resolver verificamos a Origin e posteriormente escrevemos o header.
+#<IfModule mod_headers.c>
+#   Access-Control-Allow-Origin: *
+#	Access-Control-Allow-Methods: POST, GET, DELETE, PUT
+#</IfModule>
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /api-restfull/index.php?url=$1 [QSA,NC,L]

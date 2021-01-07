@@ -1,0 +1,15 @@
+<?php
+	//Classe NoTerminalExpression do livro GOF
+	class Subtrair extends ExpAlgebrica{
+		protected $operando1;
+		protected $operando2;
+		
+		public function __construct(ExpAlgebrica $exp1, ExpAlgebrica $exp2){
+			$this->operando1 = $exp1;
+			$this->operando2 = $exp2;
+		}
+		
+		public function interpret(Contexto $contexto){
+			return $this->operando1->interpret($contexto) - $this->operando2->interpret($contexto);
+		}
+	}

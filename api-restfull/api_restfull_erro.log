@@ -1,0 +1,5 @@
+[08-Jun-2020 17:53:07 UTC] PHP Fatal error:  Uncaught Error: Class 'controller\DAOController' not found in C:\Apache24\htdocs\api-restfull\core\Core.php:54
+Stack trace:
+#0 C:\Apache24\htdocs\api-restfull\index.php(16): core\Core->iniciar()
+#1 {main}
+  thrown in C:\Apache24\htdocs\api-restfull\core\Core.php on line 54

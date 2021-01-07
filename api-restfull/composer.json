@@ -1,0 +1,13 @@
+{
+	"require":{
+	
+	},
+	"autoload":{
+		"psr-4":{
+			"model\\":"model",
+			"DAO\\":"DAO",
+			"controller\\":"controller",
+			"core\\":"core"
+		}		
+	}
+}
