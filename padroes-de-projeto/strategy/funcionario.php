@@ -3,25 +3,26 @@
 	
 	class funcionario{
 	
-		function salarioLiquido($tipoFuncionario, $salarioBruto){
+		function salarioLiquido($tipoFuncionario, Calcula_Imposto $calculaImposto){
 			$tipoFuncionario = strtolower($tipoFuncionario);
+			
+			return array($tipoFuncionario, $calculaImposto->salario());
+		
+		/*Factory
 			switch($tipoFuncionario){
 			case('assistente'):
-				$assistente = new Calcula_Imposto5($salarioBruto);
-				return $assistente->salario($salarioBruto);				
+				return new Calcula_Imposto5($salarioBruto);							
 				break;
 			case('gerente'):
-				$gerente = new Calcula_Imposto10($salarioBruto);			
-				return $gerente->salario($salarioBruto);			
+				return new Calcula_Imposto10($salarioBruto);
 				break;
 			case('diretor'):
-				$diretor = new Calcula_Imposto15($salarioBruto);			
-				return $diretor->salario($salarioBruto);				
+				return new Calcula_Imposto15($salarioBruto);
 				break;			
 			default:
 				echo 'Cargo não encontrado';
 				break;
-			}
+			}*/
 		}	
 	
 	}

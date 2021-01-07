@@ -244,7 +244,7 @@ try{
 	   <!--<script src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js" type="text/javascript"></script>-->
 	   <script src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js" type="text/javascript"></script>
 	   <script>
-		   PagSeguroDirectPayment.setSessionId("<?php echo $sessionId ?>");//O id da sessao deve ser enviado ao pagseguro
+		   PagSeguroDirectPayment.setSessionId(<?php echo $sessionId ?>);//O id da sessao deve ser enviado ao pagseguro
 	   </script>
 		<script src="assets/js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>        

@@ -5,7 +5,7 @@
 		
 		private function __construct(){}
 		
-		//Clona um objeto
+		
 		private function __clone(){}
 		
 		//Recria reconexoes com o banco de dados 
@@ -19,7 +19,7 @@
 				
 				try{
 					self::$pdo = new PDO($conn, $user, $pass);
-					self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//Relatorio de erro, lança excessoes q podem ser capturadas no catch
+					self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				}catch(PDOException $e){
 					echo "Erro na conexão: ".$e->getMessage();
 					exit();

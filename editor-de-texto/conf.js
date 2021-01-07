@@ -12,7 +12,7 @@ $(function(){
 		tabsize: "0",
 		height: "200"
 	});
-
+		
 
 	$("form").submit(function(e){
 		e.preventDefault();
@@ -26,7 +26,7 @@ $(function(){
 			url:"index.php",
 			data:dataValue,
 			dataType:"json",
-			success: function(response){
+			success: function(response){				
 				$(".summernote:eq(1)").summernote('code', response.descricao);
 				
 			}			

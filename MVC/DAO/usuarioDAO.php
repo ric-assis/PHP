@@ -1,8 +1,8 @@
 <?php
-	class UsuarioDAO{
+	class usuarioDAO{
 		private $pdo;
 		
-		public function __construct(Database $pdo){
+		public function __construct(database $pdo){
 			$this->pdo = $pdo;
 		}	
 			

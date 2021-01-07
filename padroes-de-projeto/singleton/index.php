@@ -1,4 +1,5 @@
 <?php
+
 	require_once 'singleton.php';
 	
 	$adm = Administrador::getAdm();
@@ -8,7 +9,7 @@
 	
 		
 	$adm2 = Administrador::getAdm();
-		$adm->setNomeAdm('Ricardo');
+		$adm2->setNomeAdm('Ricardo');
 	
 	echo 'Adminstrador 2: '.$adm2->getNomeAdm().'<br/>';
 	

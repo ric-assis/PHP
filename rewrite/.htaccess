@@ -1,16 +1,48 @@
 #REWRITE OU URL AMIGAVEIS
-#As urls amigas são muito usadas no .htacdess para substituir valores como por exemplo quando o usuario digitar seusite.com a url mudar para
+#As urls amigas são muito usadas no .htacess para substituir valores como por exemplo quando o usuario digitar seusite.com a url mudar para
 #https://www.seusite.com redirecionando a url para um site https e www mesmo sem o usuario digitar facilitando o SEO do google 
 #ela ira trocar a url por outra, o usuario encherga uma coisa mas no servidor esta outra.
 <IfModule mod_rewrite.c>
 	RewriteEngine On #Liga a maquina rewrite 
-	RewriteCond %{REQUEST_FILENAME} !-f
+	#RewriteCond %{REQUEST_FILENAME} !-f
 	#RewriteCond sao condições de execucao, aqui nao aplica as alterações em arquivos e logo apos em pastas
-	RewriteCond %{REQUEST_FILENAME} !-d
-
-	RewriteRule ^(.*)$ index.php?q=$1 [L]
+	#RewriteCond %{REQUEST_FILENAME} !-d
+		
+	RewriteRule ^(.*)$ index.php?q=$1 [QSA,L]
+	
+	#Outra questao as vezes necessaria é o redirecionamento dos usuarios para uma pagina de manutencao por ex.
+	#Para redirecionar todos menos voce indique seu ip em ::1
+	#Logo abaixo a pagina para onde sera o redirecionamento
+	#E por ultimo caso seja voce,o acesso ocorrera normalmente
+	RewriteCond %{REMOTE_ADDR} !^::1$ 
+	RewriteRule .* manutencao.php [L]	
+	
+	RewriteRule ^(.*)$ index.php?q=$1 [QSA,L]
+	
+	
+	
 	
 </ifModule>
 #Rule sao regras a serem aplicadas , ou seja o que de fato ira acontecer, ao acessar index ele ira passar o parametro q
 
-#^(.*) indica para armazenar em uma variavel toda a requisicao da url ^inicio $fin
+#^(.*) indica para armazenar em uma variavel toda a requisicao da url ^inicio $fin que está digitada apos o dominio
+#^ = inicio e $ =  fim
+#index.php?q=$ é o caminho atual automatico que inicia o site nao o 
+#digitado pelo usuario por exemplo, se tivesse um index o caminho 
+#atual seria rewrite/index.php?q= se tive parametros, tudo isso será mantido e adicionado o que o usuario digitou apos o q=
+#o 1(um) indica que é pra usar no lugar a primeira regra regex no caso o valor capturado pelo ^(.*)$ 
+#O L diz para parar apos substituição ou seja a regra sera a ultima
+#O QSA diz para adicionar ao final da url capturada todos os parametros caso nao use so o primeiro, geralmente esses sao descartados.
+#Outros:
+#NC Não diferencia maiscula de minuscula na url
+#R Força o redirecionando que pode ser indicado [R=301]
+
+#Backreference:
+#REQUEST_FILENAME: Caminho do arquivo correspondente ao request.
+#REMOTE_ADDR: IP do host remoto.
+#REQUEST_URI: É o path da request. Não inclui a query string.
+#DOCUMENT_ROOT: Diretório raiz do site.
+#REQUEST_SCHEME: Contém o scheme da request, que geralmente é http ou https.
+#QUERY_STRING: Query string da request. É a parte da request que vem depois do ?, se houver.
+#SERVER_NAME: host do site, definido no VirtualHost.
+#HTTP_HOST: também é o host do site, porém é definido pelo cliente, ao contrário do SERVER_NAME, que é definido pelo servidor.

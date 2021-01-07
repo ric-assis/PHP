@@ -1,7 +1,7 @@
 <?php
 	/*O padrão Adapter permite adaptar informações a classes que não temos acessos ou que não seja viavel sual alteração
 	*como por exemplo em um framework.
-	Nesse caso precisamos pegar a idade do cliente mas não podemos mexer na classe cliente além do reaproveitamento de código
+	Nesse caso precisamos adicionar a idade do cliente mas não podemos mexer na classe cliente e nem extende-la.
 	*/
 	
 	class Adapter_Cliente{

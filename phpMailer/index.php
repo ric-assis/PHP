@@ -1,4 +1,8 @@
 <?php
+	/*
+		Conf. do PHPMailer 
+	*/
+
 	//Para não gerar worning sobre o tempo de envio define um timer padrao
 	date_default_timezone_set("America/Sao_paulo");
 	
@@ -19,6 +23,17 @@
 	
 	//Ativa autenticação no SMTP
 	$mail->SMTPAuth = true;
+	
+	//Verifique se a extensao ssl esta instalada adicione o codigo echo ( extension_loaded ( 'openssl' )? 'SSL carregado' : 'SSL não carregado' ); e veja o resultado
+	//Para enviar email mesmo com problema de sertificação ssl ou encrypt:
+	/*
+	$mail->SMTPOptions = array(
+	'ssl' => array(
+		'verify_peer' => false,
+		'verify_peer_name' => false,
+		'allow_self_signed' => true
+	)
+	*/
 	
 	//Usuario da conta SMTP
 	$mail->Username = "seuemail@gmail.com";
@@ -60,11 +75,5 @@
 		echo "<h2>Erro ao enviar</h2>".$mail->ErrorInfo();
 	}
 	
-	/*
-	*OBS: Para o envio do anexo de imagem caso a versão do php seja inferior a 6 ocorrera mensagens worning de retorno 
-	*para resolver edite o arquivo class.phpmiler.php e altere nas linhas 1469 e 1475 a versão do php de 6
-	*para 5 caso esteja usando a versao 5 ou anterior.
-	*
-    *if (PHP_VERSION < 6) { troque por 5
-	*/
+
 ?>

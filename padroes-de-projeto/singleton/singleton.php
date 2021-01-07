@@ -21,6 +21,7 @@
 			return self::$adm;
 		}		
 		
+		//Metodos somente pra demostração  da criação de um unico objeto
 		public function setNomeAdm($nome){
 			$this->nomeAdm = $nome;
 		}

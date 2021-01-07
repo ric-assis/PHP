@@ -32,7 +32,7 @@ try{
     
         ); 
         
-        //Pega o novo status e a referencia pra saber quem efetuou o pagamento    
+        //Pega o novo status e a referencia pra saber quem efetuou o pagamento, esse é o retorno com o codigo ou dados de quem pagou    
         $referencia = $resposta->getReference();
         $status = $resposta->getStatus();     
     } else {

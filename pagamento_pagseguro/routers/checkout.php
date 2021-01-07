@@ -116,7 +116,7 @@ $creditCard->setHolder()->setBirthDate($dataNascimento);
 //Forma de pagamento padrão para todos
 $creditCard->setMode('DEFAULT');
 
-//Recebe notificacao de status do pagamento do pagseguro alterando o DB de a receber para recebido por ex.. nao sei se funciona no localhost
+//Recebe notificacao de status do pagamento do pagseguro alterando o DB de a receber para recebido por ex.. 
 $creditCard->setNotificationURL('http://ariccassis.tk/pagamento_pagseguro/routers/notificacao-pagseguro.php');
 
 //Registrar o pagamento e recebe a resposta do pagseguro, executar dentro de um tray/catch

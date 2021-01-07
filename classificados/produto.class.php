@@ -7,8 +7,7 @@
 		private $categoria;
 		private $estado;
 		private $valor;
-		private $descricao;		
-		//Fotos é uma composição pois a mesma só deve existir se existir o produto
+		private $descricao;			
 		private $fotos; 
 		
 		public function __construct($dados_literais){						

@@ -1,14 +1,15 @@
 <?php 
-	class homeController extends Controller{		
+	class homeController extends controller{		
 		//As classes iram extender controller para receber os views
 		//A primeira action a ser criada é a index.
 		public function index(){
 			//Recebe os dados do banco
-			$usuario = new Usuario();
+			$usuario = new usuarioModel();
 			//Para enviar dados dinamicos para o view passamos um array como parametro
 			$dados = array(
 				'quant' => $usuario->getQuantUsuario()[0],
-				'nome' => 'Alonso'
+				'nome' => 'Alonso', 
+				'titulo' => 'Home'
 			);
 			
 			//Para adicionar um template puxamos ele antes do view 

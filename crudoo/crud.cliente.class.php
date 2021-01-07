@@ -3,7 +3,7 @@
 	
 	class CrudCliente{
 		
-		function salvar($obj){		
+		function salvar(Cliente $obj){		
 			$pdo = Connect::getPDO();
 			
 			$stm = $pdo->prepare("INSERT INTO cliente(nome, email, rua, bairro, numero) VALUES(?, ?, ?, ?, ?)");
@@ -31,7 +31,7 @@
 			}			
 		}
 		
-		function atualizar($obj){
+		function atualizar(Cliente $obj){
 			$pdo = Connect::getPDO();
 			
 			$stm = $pdo->prepare("UPDATE cliente SET nome=?, email=?, rua=?, bairro=?, numero=? WHERE id=?");

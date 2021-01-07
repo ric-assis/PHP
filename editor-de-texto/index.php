@@ -8,8 +8,7 @@
 		$retorno = array("nome" => $nome, 
 						"email" => $email,
 						"descricao" => $descricao
-						);
-						
+						);						
 		
 		echo json_encode($retorno);
 		exit;

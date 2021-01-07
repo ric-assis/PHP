@@ -1,7 +1,7 @@
 <?php
-	class Core{
+	class core{
 		public function run(){
-			$url = '/'; //Caso nao tenha parametros
+			$url = '/'; //Caso nao tenha parametros, o nome url tem que ser igual o nome definido no htacess
 			$params = array();
 			
 			if(isset($_GET['url'])){
@@ -12,9 +12,10 @@
 				$url = explode('/', $url);
 				//Remover o primeiro registro do get que nao tem valor
 				array_shift($url);
-				//Agora o array[0] será o controler devido a ordem
+				//Agora o array[0] será o controller devido a ordem
 				//Concatenando url[0] com Controller ficara o valor 0 do array que é o controler concatenado com Controler formando por ex: homeController
-				$currentController = $url[0].'Controller';
+				//ucwords converte a primeira letra do controller pra maiusculo assim se digitar a url .../home/ ele muda pra Home no controller ficando compativel com a classe
+				$currentController = ucwords($url[0]).'Controller';
 				//Como o controller ja foi usado podemos remove-lo
 				array_shift($url);
 				
@@ -33,7 +34,7 @@
 				
 			}else{
 				//Se nao foi enviado na no get seta o valor definido como padrao sendo homeController o controller e index o action
-				$currentController = 'homecontroller';
+				$currentController = 'HomeController';
 				$currentAction = 'index';
 			}
 			

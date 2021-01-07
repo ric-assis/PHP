@@ -12,9 +12,13 @@
 	class Calcula_Imposto5 implements Calcula_Imposto{
 		private $salario;
 		
-		public function salario($salario){
+		public function __construct($salario){
+			$this->salario = $salario;
+		}
+		
+		public function salario(){
 			$desconto = (5 * 100)/100;
-			$this->salario = intval($salario - $desconto);			
+			$this->salario = intval($this->salario - $desconto);			
 			return $this->salario;
 		}	
 	}
@@ -24,9 +28,13 @@
 	class Calcula_Imposto10 implements Calcula_Imposto{
 		private $salario;
 		
-		public function salario($salario){
+		public function __construct($salario){
+			$this->salario = $salario;
+		}
+		
+		public function salario(){
 			$desconto = (10 * 100)/100;
-			$this->salario = intval($salario - $desconto);			
+			$this->salario = intval($this->salario - $desconto);			
 			return $this->salario;
 		}		
 	}
@@ -36,9 +44,13 @@
 	class Calcula_Imposto15 implements Calcula_Imposto{
 		private $salario;
 		
-		public function salario($salario){
+		public function __construct($salario){
+			$this->salario = $salario;
+		}
+		
+		public function salario(){
 			$desconto = (15 * 100)/100;
-			$this->salario = intval($salario - $desconto);			
+			$this->salario = intval($this->salario - $desconto);			
 			return $this->salario;
 		}
 	}

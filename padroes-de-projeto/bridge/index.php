@@ -10,6 +10,9 @@
 	$veiculoCaminhonete = new Caminhonete(new Pneu15());
 	echo $veiculoCaminhonete->getAro();
 
-
+	echo '<br/>';	
+	
+	$veiculoPasseio = new Passeio(new Pneu15());
+	echo $veiculoPasseio->getAro();
 	
 

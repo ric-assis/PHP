@@ -1,1 +1,4 @@
-<h1>Você tem <?php echo $quant ?> fotos na galeria</h1>
+
+<h1 id="textoG">Você tem <?php if(isset($quant) && !empty($quant)) echo $quant ?> fotos na galeria</h1>
+
+
