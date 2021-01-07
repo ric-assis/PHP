@@ -22,16 +22,15 @@ wordpress2/
 /br.com.guiaexpressocrateus - Copia (2)/
 /xyz.ganharcomclickmusic/
 /br.com.meumundopsi/
-/br.solucoesengenharia/nbproject/private/
-/xyz.ganharcomclickmusic.adm/nbproject/private/
-/leilao/nbproject/private/
+/br.solucoesengenharia/
+/xyz.ganharcomclickmusic.adm/
 /br.com.guiaexpressocrateus.cupom/
 /br.com.devr7.farmacia/
 /br.com.devr7/
 /br.com.devr7.leilao.adm/
 /br.com.devr7.leilao/
 /br.solucoesengenharia/
-/SOAP
+/SOAP/
 /classificados/
 /captcha/
 /codeigniter-teste/
@@ -91,3 +90,9 @@ wordpress2/
 /blog/
 /calendario/
 /calculo-distancia/
+/crud/
+/editor-de-texto/
+/heranca/
+/modelo_de_painel_com_mvc/
+/twa/
+/codeigniter-teste/
