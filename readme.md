@@ -1,1 +1,1 @@
-Validação e testes simples de funcionalidades
+Exemplos simples de estudos em PHP, JS, JQuery, HTML e CSS
